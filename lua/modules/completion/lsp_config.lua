@@ -58,6 +58,7 @@ function M.lsp_config()
 		"ts_ls",
 		"pylyzer",
 		"vimls",
+    "tailwindcss",
 		"bashls",
 	}
 
