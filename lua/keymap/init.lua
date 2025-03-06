@@ -7,11 +7,6 @@ local opts = key.new_opts
 local cmd = key.cmd
 
 nmap({
-	-- packer
-	{ "<Leader>pu", cmd("PackerUpdate"), opts(noremap, silent) },
-	{ "<Leader>pi", cmd("PackerInstall"), opts(noremap, silent) },
-	{ "<Leader>pc", cmd("PackerCompile"), opts(noremap, silent) },
-	{ "<Leader>ps", cmd("PackerSync"), opts(noremap, silent) },
 	-- Telescope file file_browser
 	{
 		"<Leader>ee",
@@ -92,6 +87,10 @@ nmap({
 	{ "<Leader>rc", cmd([[lua require('refactoring').debug.cleanup({})]]), opts(noremap, silent) },
 	-- clear highlighted search
 	{ "<C-l>", cmd("noh"), opts(noremap, silent) },
+	-- specter
+	{ "<Leader>S", cmd([[lua require("spectre").toggle()]]), opts(noremap, silent) },
+	{ "<Leader>sw", cmd([[lua require("spectre").open_visual({select_word=true})]]), opts(noremap, silent) },
+	{ "<Leader>sp", cmd([[lua require("spectre").open_file_search({select_word=true})]]), opts(noremap, silent) },
 })
 
 vmap({
