@@ -59,7 +59,8 @@ function M.lsp_config()
 		"vimls",
     "tailwindcss",
 		"bashls",
-		"tailwindcss",
+    "prettierd",
+    "eslint_d"
 	}
 
 	for _, lsp in ipairs(lsp_servers) do
